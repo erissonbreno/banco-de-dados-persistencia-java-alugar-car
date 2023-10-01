@@ -1,0 +1,3 @@
+Bike,90,NORMAL,Caloi,true,Vermelha
+Bicicreta,50,CANSADA,Sem Marca,false,Ferrugem
+Bike Top, 180,PREMIUM,Yamaha,true,Ferrugem

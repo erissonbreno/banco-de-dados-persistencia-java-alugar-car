@@ -1,0 +1,3 @@
+CG150,350,CANSADA,Honda,true,Azul
+Biz,310,CANSADA,Honda,true,Verde
+Hornet,750,PREMIUM,Yamaha,false,Branco

@@ -1,0 +1,15 @@
+L,Pedido Breno,Breno,123456,e@b.com
+C,Nivus,2000.00,PREMIUM,VW,false,10000
+B,Bike Top,180,PREMIUM,Yamaha,true,Ferrugem
+L,Pedido Jose,Jose,456789,j@e.com
+C,XC60,3100.00,PREMIUM,Volvo,true,5000
+M,CG150,350,CANSADA,Honda,true,Azul
+L,Pedido Maria,Maria,4567890,m@a.com
+B,Bike,90,NORMAL,Caloi,true,Vermelha
+L,Pedido Joaquim,Joaquim,789456,jo@q.com
+M,Hornet,750,PREMIUM,Yamaha,false,Branco
+C,Gol,800.00,CANSADA,VW,false,80000
+L,Pedido Paminondas,Paminas,456123,p@mnd.com
+M,Biz,310,CANSADA,Honda,true,Verde
+B,Bicicreta,50,CANSADA,Sem Marca,false,Ferrugem
+C,Gol,800.00,CANSADA,VW,false,80000
