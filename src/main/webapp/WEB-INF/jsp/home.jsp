@@ -9,5 +9,9 @@
 </head>
 <body>
 <c:import url="/WEB-INF/jsp/menu.jsp"></c:import>
+<div class="container mt-3">
+    <h2>AlugaCar</h2>
+    <p>Aluguel de veículos</p>
+</div>
 </body>
 </html>

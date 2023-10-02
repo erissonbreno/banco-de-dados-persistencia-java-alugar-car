@@ -3,27 +3,28 @@
 <nav class="navbar navbar-expand-sm bg-primary navbar-dark">
     <div class="container-fluid">
         <ul class="navbar-nav">
-            <li class="nav-item">
-                <a class="nav-link active" href="/">AlugaCar</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="/cliente/lista">Cliente</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">Locação</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">Veículos</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">Carro</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">Moto</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">Bicicleta</a>
-            </li>
+            <li class="nav-item"><a class="nav-link active" href="/">AlugaCar</a></li>
+            <c:if test="${not empty user}">
+            <li class="nav-item"><a class="nav-link" href="/usuario/lista">Usuários</a></li>
+            <li class="nav-item"><a class="nav-link" href="/cliente/lista">Clientes</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">Locação</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">Veículos</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">Carro</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">Moto</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">Bicicleta</a></li>
+            </c:if>
+
+        </ul>
+
+        <ul class="navbar navbar-expand-sm bg-dark navbar-dark">
+            <c:if test="${empty user}">
+                <li><a href="/usuario/cadastro"><span class="glyphicon glyphicon-user"></span> Cadastro</a></li>
+                <li><a href="/login"><span class="glyphicon glyphicon-log-in"></span> Entrar</a></li>
+            </c:if>
+
+            <c:if test="${not empty user}">
+                <li><a href="/logout"><span class="glyphicon glyphicon-log-out"></span> Sair ${user.nome}</a></li>
+            </c:if>
         </ul>
     </div>
 </nav>
