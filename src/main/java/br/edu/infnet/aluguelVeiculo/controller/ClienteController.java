@@ -1,29 +1,44 @@
 package br.edu.infnet.aluguelVeiculo.controller;
 
-import br.edu.infnet.aluguelVeiculo.ClienteLoader;
 import br.edu.infnet.aluguelVeiculo.model.Cliente;
-import lombok.Getter;
+import br.edu.infnet.aluguelVeiculo.service.ClienteService;
 import lombok.Setter;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
-
-import java.util.ArrayList;
-import java.util.Collection;
-import java.util.List;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
 
 @Controller
 @Setter
 public class ClienteController {
 
     @Autowired
-    private ClienteLoader clienteLoader;
+    private ClienteService clienteService;
 
     @GetMapping(value = "/cliente/lista")
     public String telaCliente(Model model) {
 
-        model.addAttribute("listaCliente", clienteLoader.obterClientes());
+        model.addAttribute("listaCliente", clienteService.obterLista());
         return "cliente/lista";
+    }
+
+    @GetMapping(value = "/cliente/cadastro")
+    public String telaCadastro() {
+
+        return "cliente/cadastro";
+    }
+
+    @PostMapping(value = "/cliente/incluir")
+    public String incluir(Cliente cliente) {
+        clienteService.incluir(cliente);
+        return "redirect:/cliente/lista";
+    }
+
+    @GetMapping(value = "/cliente/{cpf}/excluir")
+    public String excluir(@PathVariable Integer cpf) {
+        clienteService.excluir(cpf);
+        return "redirect:/cliente/lista";
     }
 }
