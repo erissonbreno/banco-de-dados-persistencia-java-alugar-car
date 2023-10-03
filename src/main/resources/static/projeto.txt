@@ -1,0 +1,24 @@
+P;AlugaCar;Projeto de Aluguel de Carros
+C;Locacao
+A;descricao;String;Detalhamento do aluguel
+A;data;LocalDateTime;Data de realizacao da locacao
+C;Cliente
+A;nome;String;Nome do cliente
+A;email;String;E-mail do cliente
+A;cpf;Integer;CPF do cliente
+C;Veiculo
+A;nome;String;Nome do veiculo
+A;valor;double;Valor do veiculo
+A;categoria;Categoria;Categoria do veiculo
+C;Carro
+A;marca;String;Marca do carro
+A;eletrico;boolean;Indicativo se o carro e eletrico
+A;quilometragem;Integer;Quilometragem do carro
+C;Moto
+A;modelo;String;Modelo da moto
+A;urbana;boolean;Indicativo se a moto e urbana
+A;corCapacete;String;Cor do capacete
+C;Bicicleta
+A;modelo;String;Modelo da bicicleta
+A;comCesta;boolean;Indicativo se a bicicleta e com cesta
+A;cor;String;Cor da bicicleta
