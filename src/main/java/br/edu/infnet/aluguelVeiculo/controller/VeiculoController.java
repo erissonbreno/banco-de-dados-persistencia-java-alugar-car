@@ -1,6 +1,6 @@
 package br.edu.infnet.aluguelVeiculo.controller;
 
-import br.edu.infnet.aluguelVeiculo.service.MotoService;
+import br.edu.infnet.aluguelVeiculo.service.VeiculoService;
 import lombok.Setter;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -10,20 +10,21 @@ import org.springframework.web.bind.annotation.PathVariable;
 
 @Controller
 @Setter
-public class MotoController {
+public class VeiculoController {
 
     @Autowired
-    private MotoService motoService;
+    private VeiculoService veiculoService;
 
-    @GetMapping(value = "/moto/lista")
+    @GetMapping(value = "/veiculo/lista")
     public String telaLista(Model model) {
-        model.addAttribute("listaMoto", motoService.obterLista());
-        return "moto/lista";
+
+        model.addAttribute("listaVeiculo", veiculoService.obterLista());
+        return "veiculo/lista";
     }
 
-    @GetMapping(value = "/moto/{id}/excluir")
+    @GetMapping(value = "/veiculo/{id}/excluir")
     public String excluir(@PathVariable Integer id) {
-        motoService.excluir(id);
-        return "redirect:/moto/lista";
+        veiculoService.excluir(id);
+        return "redirect:/veiculo/lista";
     }
 }

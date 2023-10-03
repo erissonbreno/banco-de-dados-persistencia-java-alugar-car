@@ -28,9 +28,9 @@ public class UsuarioController {
         return "usuario/cadastro";
     }
 
-    @GetMapping(value = "/usuario/{cpf}/excluir")
-    public String excluir(@PathVariable String email) {
-        usuarioService.excluir(email);
+    @GetMapping(value = "/usuario/{id}/excluir")
+    public String excluir(@PathVariable Integer id) {
+        usuarioService.excluir(id);
         return "redirect:/usuario/lista";
     }
 
