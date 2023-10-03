@@ -1,4 +1,4 @@
-package br.edu.infnet.aluguelVeiculo;
+package br.edu.infnet.aluguelVeiculo.loader;
 
 import br.edu.infnet.aluguelVeiculo.categoria.Categoria;
 import br.edu.infnet.aluguelVeiculo.model.Cliente;

@@ -1,8 +1,10 @@
-package br.edu.infnet.aluguelVeiculo;
+package br.edu.infnet.aluguelVeiculo.loader;
 
 import br.edu.infnet.aluguelVeiculo.categoria.Categoria;
 import br.edu.infnet.aluguelVeiculo.model.Carro;
 import br.edu.infnet.aluguelVeiculo.model.Moto;
+import br.edu.infnet.aluguelVeiculo.service.VeiculoService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.ApplicationArguments;
 import org.springframework.boot.ApplicationRunner;
 import org.springframework.core.annotation.Order;
@@ -14,6 +16,9 @@ import java.io.FileReader;
 @Order(2)
 @Component
 public class MotoLoader implements ApplicationRunner {
+
+    @Autowired
+    VeiculoService veiculoService;
     @Override
     public void run(ApplicationArguments args) throws Exception {
         FileReader file = new FileReader("src/main/resources/static/moto.txt");
@@ -23,7 +28,6 @@ public class MotoLoader implements ApplicationRunner {
 
         String campos[] = null;
 
-        System.out.println("##########################");
         while (linha != null) {
             campos = linha.split(",");
             Moto moto = new Moto(campos[0],
@@ -34,8 +38,8 @@ public class MotoLoader implements ApplicationRunner {
                     campos[5]);
             System.out.println("linha: " + linha);
             System.out.println(moto);
+            veiculoService.incluir(moto);
             linha = leitura.readLine();
         }
-        System.out.println("##########################");
     }
 }

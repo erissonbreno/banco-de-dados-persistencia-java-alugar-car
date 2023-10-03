@@ -1,4 +1,4 @@
-package br.edu.infnet.aluguelVeiculo;
+package br.edu.infnet.aluguelVeiculo.loader;
 
 import br.edu.infnet.aluguelVeiculo.model.Cliente;
 import br.edu.infnet.aluguelVeiculo.service.ClienteService;
@@ -28,7 +28,6 @@ public class ClienteLoader implements ApplicationRunner {
 
         String[] campos;
 
-        System.out.println("##########################");
         while (linha != null) {
             campos = linha.split(",");
             Cliente cliente = new Cliente(campos[0],
@@ -38,7 +37,5 @@ public class ClienteLoader implements ApplicationRunner {
             clienteService.incluir(cliente);
             linha = leitura.readLine();
         }
-
-        System.out.println("##########################");
     }
 }
