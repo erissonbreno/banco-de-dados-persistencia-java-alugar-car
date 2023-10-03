@@ -1,5 +1,6 @@
 package br.edu.infnet.aluguelVeiculo.controller;
 
+import br.edu.infnet.aluguelVeiculo.app.Projeto;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -12,6 +13,12 @@ import javax.servlet.http.HttpSession;
 
 @Controller
 public class AppController {
+
+    private Projeto projeto;
+
+    public void incluir(Projeto projeto) {
+        this.projeto = projeto;
+    }
 
     @GetMapping(value = "/")
     public String telaHome() {
@@ -28,6 +35,14 @@ public class AppController {
         status.setComplete();
         session.removeAttribute("user");
         return "redirect:/";
+    }
+
+    @GetMapping(value = "/sobre")
+    public String telaSobre(Model model) {
+
+        model.addAttribute("projeto", projeto);
+
+        return "sobre";
     }
 
 }
