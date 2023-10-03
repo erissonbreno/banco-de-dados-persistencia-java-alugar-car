@@ -1,6 +1,8 @@
 package br.edu.infnet.aluguelVeiculo.service;
 
 import br.edu.infnet.aluguelVeiculo.model.Usuario;
+import br.edu.infnet.aluguelVeiculo.repository.UsuarioRepository;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.Collection;
@@ -10,24 +12,22 @@ import java.util.Map;
 @Service
 public class UsuarioService {
 
-    private Map<String, Usuario> mapaUsuario = new HashMap<>();
-
+    @Autowired
+    UsuarioRepository usuarioRepository;
     public void incluir(Usuario usuario) {
-        mapaUsuario.put(usuario.getEmail(), usuario);
-        System.out.println(usuario);
-
+        usuarioRepository.save(usuario);
     }
 
-    public void excluir(String cpf) {
-        mapaUsuario.remove(cpf);
+    public void excluir(Integer id) {
+        usuarioRepository.deleteById(id);
     }
 
     public Collection<Usuario> obterLista() {
-        return mapaUsuario.values();
+        return (Collection<Usuario>) usuarioRepository.findAll();
     }
 
     public Usuario validar(String email, String senha) {
-        Usuario usuario = mapaUsuario.get(email);
+        Usuario usuario = usuarioRepository.findByEmail(email);
 
         if (usuario != null) {
             if (usuario.getSenha().equals(senha)) {
