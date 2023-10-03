@@ -10,7 +10,7 @@
 <body>
 <c:import url="/WEB-INF/jsp/menu.jsp"></c:import>
 <div class="container-fluid mt-3">
-    <h3>Cadastro de usuário</h3>
+    <h3>Lista de Usuários</h3>
 </div>
 
 <table class="table">

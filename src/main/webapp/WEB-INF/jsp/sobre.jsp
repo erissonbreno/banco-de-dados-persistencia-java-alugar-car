@@ -10,39 +10,30 @@
 <body>
 <c:import url="/WEB-INF/jsp/menu.jsp"></c:import>
 <div class="container mt-3">
-    <h2>Classes de dominio</h2>
-    <p>Aluguel de veículos</p>
-    <table class="table">
-        <thead>
-        <tr>
-            <th>Campo</th>
-            <th>Tipo</th>
-            <th>Observação</th>
-        </tr>
-        </thead>
-        <tbody>
-        <tr>
-            <td>Descrição</td>
-            <td>String</td>
-            <td>Detalhamento do aluguel</td>
-        </tr>
-        <tr>
-            <td>Data</td>
-            <td>LocalDateTime</td>
-            <td>Data da locação</td>
-        </tr>
-        <tr>
-            <td>Veiculo</td>
-            <td>List<'Veiculos'></td>
-            <td>Lista de veículos</td>
-        </tr>
-        <tr>
-            <td>Cliente</td>
-            <td>Cliente</td>
-            <td>Cliente</td>
-        </tr>
-        </tbody>
-    </table>
+    <h2>${projeto.nome} - ${projeto.descricao}</h2>
+
+    <c:forEach var="c" items="${projeto.classes}">
+        <h4>Documentação de classes</h4>
+        <h5>${c.nome}</h5>
+        <table class="table table-striped">
+            <thead>
+            <tr>
+                <th>Campo</th>
+                <th>Tipo</th>
+                <th>Observação</th>
+            </tr>
+            </thead>
+            <tbody>
+            <c:forEach var="a" items="${c.atributos}">
+                <tr>
+                    <td>${a.nome}</td>
+                    <td>${a.tipo}</td>
+                    <td>${a.descricao}</td>
+                </tr>
+            </c:forEach>
+            </tbody>
+        </table>
+    </c:forEach>
 </div>
 </body>
 </html>

@@ -10,27 +10,31 @@
 <body>
 <c:import url="/WEB-INF/jsp/menu.jsp"></c:import>
 <div class="container-fluid mt-3">
-    <h3>Lista de Locações</h3>
+    <h3>Lista de Veículos</h3>
 </div>
 
 <table class="table">
     <thead>
     <tr>
-        <th>Descrição</th>
-        <th>Data</th>
-        <th>Veiculos</th>
-        <th>Cliente</th>
+        <th>Id</th>
+        <th>Nome</th>
+        <th>Valor</th>
+        <th>Categoria</th>
+        <th>Usuario</th>
+        <th>Locacoes</th>
     </tr>
     </thead>
     <tbody>
-    <c:forEach var="locacao" items="${listaLocacao}">
+    <c:forEach var="veiculo" items="${listaVeiculo}">
 
         <tr>
-            <td>${locacao.descricao}</td>
-            <td>${locacao.data}</td>
-            <td>${locacao.veiculos}</td>
-            <td>${locacao.cliente}</td>
-            <td><a href="/locacao/${locacao.id}/excluir">excluir</a> </td>
+            <td>${veiculo.id}</td>
+            <td>${veiculo.nome}</td>
+            <td>${veiculo.valor}</td>
+            <td>${veiculo.categoria}</td>
+            <td>${veiculo.usuario}</td>
+            <td>${veiculo.locacao}</td>
+            <td><a href="/veiculo/${veiculo.id}/excluir">excluir</a> </td>
         </tr>
     </c:forEach>
     </tbody>

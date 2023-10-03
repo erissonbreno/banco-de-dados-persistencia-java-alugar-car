@@ -3,15 +3,15 @@
 <nav class="navbar navbar-expand-sm bg-primary navbar-dark">
     <div class="container-fluid">
         <ul class="navbar-nav">
-            <li class="nav-item"><a class="nav-link active" href="/">AlugaCar</a></li>
+            <li class="nav-item"><a class="nav-link active" href="/sobre">AlugaCar</a></li>
             <c:if test="${not empty user}">
             <li class="nav-item"><a class="nav-link" href="/usuario/lista">Usuários</a></li>
             <li class="nav-item"><a class="nav-link" href="/cliente/lista">Clientes</a></li>
-            <li class="nav-item"><a class="nav-link" href="#">Locação</a></li>
-            <li class="nav-item"><a class="nav-link" href="#">Veículos</a></li>
-            <li class="nav-item"><a class="nav-link" href="#">Carro</a></li>
-            <li class="nav-item"><a class="nav-link" href="#">Moto</a></li>
-            <li class="nav-item"><a class="nav-link" href="#">Bicicleta</a></li>
+            <li class="nav-item"><a class="nav-link" href="/locacao/lista">Locação</a></li>
+            <li class="nav-item"><a class="nav-link" href="/veiculo/lista">Veículos</a></li>
+            <li class="nav-item"><a class="nav-link" href="/carro/lista">Carro</a></li>
+            <li class="nav-item"><a class="nav-link" href="/moto/lista">Moto</a></li>
+            <li class="nav-item"><a class="nav-link" href="/bicicleta/lista">Bicicleta</a></li>
             </c:if>
 
         </ul>
