@@ -1,6 +1,7 @@
 package br.edu.infnet.aluguelVeiculo.service;
 
 import br.edu.infnet.aluguelVeiculo.model.Cliente;
+import br.edu.infnet.aluguelVeiculo.model.Usuario;
 import br.edu.infnet.aluguelVeiculo.repository.ClienteRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -26,5 +27,9 @@ public class ClienteService {
 
     public Collection<Cliente> obterLista() {
         return (Collection<Cliente>) clienteRepository.findAll();
+    }
+
+    public Collection<Cliente> obterLista(Usuario usuario) {
+        return clienteRepository.obterLista(usuario.getId());
     }
 }

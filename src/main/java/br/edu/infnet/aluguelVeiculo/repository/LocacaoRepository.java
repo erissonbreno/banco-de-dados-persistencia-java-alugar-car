@@ -10,7 +10,7 @@ import java.util.List;
 
 @Repository
 public interface LocacaoRepository extends CrudRepository<Locacao,Integer> {
-    @Query("from Locacao p where p.usuario.id = :userid")
+    @Query("from Locacao l where l.usuario.id = :userid")
     List<Locacao> obterLista(Integer userid);
 
 }

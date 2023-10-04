@@ -11,7 +11,6 @@ import org.springframework.stereotype.Component;
 import java.util.HashMap;
 import java.util.Map;
 
-@Order(6)
 @Component
 public class MapLoader implements ApplicationRunner {
     @Override
@@ -24,7 +23,5 @@ public class MapLoader implements ApplicationRunner {
         mapa.put(maria.getCpf(), maria.getNome());
         mapa.put(breno.getCpf(), breno.getNome());
 
-        System.out.println(mapa.keySet());
-        System.out.println(mapa.get(123456));
     }
 }

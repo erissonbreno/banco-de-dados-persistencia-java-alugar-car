@@ -15,6 +15,9 @@ public class Bicicleta extends Veiculo{
     private String modelo;
     private boolean comCesta;
     private String cor;
+    @ManyToOne
+    @JoinColumn(name = "idUsuario")
+    private Usuario usuario;
 
     public Bicicleta(Integer id) {
         super(id);

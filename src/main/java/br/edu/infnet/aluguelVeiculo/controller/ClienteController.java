@@ -1,6 +1,7 @@
 package br.edu.infnet.aluguelVeiculo.controller;
 
 import br.edu.infnet.aluguelVeiculo.model.Cliente;
+import br.edu.infnet.aluguelVeiculo.model.Usuario;
 import br.edu.infnet.aluguelVeiculo.service.ClienteService;
 import lombok.Setter;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -9,6 +10,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.SessionAttribute;
 
 @Controller
 @Setter
@@ -18,9 +20,9 @@ public class ClienteController {
     private ClienteService clienteService;
 
     @GetMapping(value = "/cliente/lista")
-    public String telaCliente(Model model) {
+    public String telaCliente(Model model, @SessionAttribute("user") Usuario usuario) {
 
-        model.addAttribute("listaCliente", clienteService.obterLista());
+        model.addAttribute("listaCliente", clienteService.obterLista(usuario));
         return "cliente/lista";
     }
 
@@ -31,7 +33,8 @@ public class ClienteController {
     }
 
     @PostMapping(value = "/cliente/incluir")
-    public String incluir(Cliente cliente) {
+    public String incluir(Cliente cliente, @SessionAttribute("user") Usuario usuario) {
+        cliente.setUsuario(usuario);
         clienteService.incluir(cliente);
         return "redirect:/cliente/lista";
     }
