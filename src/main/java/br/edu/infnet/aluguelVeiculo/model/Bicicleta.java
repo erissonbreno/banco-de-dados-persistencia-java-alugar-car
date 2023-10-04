@@ -10,7 +10,7 @@ import javax.persistence.*;
 @EqualsAndHashCode(callSuper = true)
 @Data @NoArgsConstructor
 @Entity @Table
-public class Bicicleta extends Veiculo{
+public class Bicicleta extends Veiculo {
 
     private String modelo;
     private boolean comCesta;
@@ -28,15 +28,5 @@ public class Bicicleta extends Veiculo{
         this.modelo = modelo;
         this.comCesta = comCesta;
         this.cor = cor;
-    }
-
-    @Override
-    public String toString() {
-        return "Bicicleta{" +
-                super.toString() +
-                ", modelo='" + modelo + '\'' +
-                ", comCesta=" + comCesta +
-                ", cor='" + cor + '\'' +
-                '}';
     }
 }

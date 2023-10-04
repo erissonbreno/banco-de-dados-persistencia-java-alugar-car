@@ -27,15 +27,7 @@ public abstract class Veiculo {
         this.valor = valor;
         this.categoria = categoria;
     }
-
     public Veiculo(Integer id) {
         this.id = id;
-    }
-
-    @Override
-    public String toString() {
-        return "nome='" + nome + '\'' +
-                ", valor=" + valor +
-                ", categoria=" + categoria;
     }
 }

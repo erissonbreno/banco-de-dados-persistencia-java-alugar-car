@@ -25,14 +25,4 @@ public class Carro extends Veiculo {
         this.eletrico = eletrico;
         this.quilometragem = quilometragem;
     }
-
-    @Override
-    public String toString() {
-        return "Carro{" +
-                super.toString() +
-                ", marca='" + marca + '\'' +
-                ", eletrico=" + eletrico +
-                ", quilometragem=" + quilometragem +
-                '}';
-    }
 }

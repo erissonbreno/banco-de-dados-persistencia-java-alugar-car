@@ -27,13 +27,4 @@ public class Cliente {
     public Cliente(Integer id) {
         this.id = id;
     }
-
-    @Override
-    public String toString() {
-        return "Cliente{" +
-                "nome='" + nome + '\'' +
-                ", cpf=" + cpf +
-                ", email='" + email + '\'' +
-                '}';
-    }
 }

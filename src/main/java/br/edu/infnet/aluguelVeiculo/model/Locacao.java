@@ -34,14 +34,4 @@ public class Locacao {
         this.veiculos = veiculos;
         this.usuario = usuario;
     }
-
-    @Override
-    public String toString() {
-        return "Locacao{" +
-                "descricao='" + descricao + '\'' +
-                ", data=" + data +
-                ", veiculos=" + veiculos +
-                ", cliente=" + cliente +
-                '}';
-    }
 }

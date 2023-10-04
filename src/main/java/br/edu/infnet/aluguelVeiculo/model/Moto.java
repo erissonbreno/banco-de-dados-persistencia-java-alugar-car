@@ -25,14 +25,4 @@ public class Moto extends Veiculo{
     public Moto(Integer id) {
         super(id);
     }
-
-    @Override
-    public String toString() {
-        return "Moto{" +
-                super.toString() +
-                ", modelo='" + modelo + '\'' +
-                ", urbana=" + urbana +
-                ", corCapacete='" + corCapacete + '\'' +
-                '}';
-    }
 }
