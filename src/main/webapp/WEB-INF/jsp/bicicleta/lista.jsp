@@ -22,6 +22,7 @@
         <th>Modelo</th>
         <th>Com cesta?</th>
         <th>Cor</th>
+        <th>Usuario</th>
     </tr>
     </thead>
     <tbody>
@@ -34,6 +35,7 @@
         <td>${bicicleta.modelo}</td>
         <td>${bicicleta.comCesta}</td>
         <td>${bicicleta.cor}</td>
+        <td>${bicicleta.usuario.nome}</td>
         <td><a href="/bicicleta/${bicicleta.id}/excluir">excluir</a> </td>
     </tr>
     </c:forEach>

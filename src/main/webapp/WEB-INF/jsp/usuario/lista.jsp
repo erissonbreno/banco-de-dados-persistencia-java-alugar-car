@@ -16,9 +16,12 @@
 <table class="table">
     <thead>
     <tr>
+        <th>Id</th>
         <th>Nome</th>
         <th>Email</th>
         <th>Senha</th>
+        <th>Clientes</th>
+        <th>Veiculos</th>
         <th></th>
     </tr>
     </thead>
@@ -26,9 +29,12 @@
     <c:forEach var="usuario" items="${listaUsuario}">
 
     <tr>
+        <td>${usuario.id}</td>
         <td>${usuario.nome}</td>
         <td>${usuario.email}</td>
         <td>${usuario.senha}</td>
+        <td>${usuario.clientes.size()}</td>
+        <td>${usuario.veiculos.size()}</td>
         <td><a href="/usuario/${usuario.email}/excluir">excluir</a> </td>
     </tr>
     </c:forEach>

@@ -10,7 +10,7 @@
 <body>
 <c:import url="/WEB-INF/jsp/menu.jsp"></c:import>
 <div class="container mt-3">
-    <h2>Cadastramento de usuários</h2>
+    <h2>Cadastro de usuario</h2>
     <form action="/usuario/incluir" method="post">
         <div class="mb-3 mt-3">
             <label for="nome">Nome:</label>

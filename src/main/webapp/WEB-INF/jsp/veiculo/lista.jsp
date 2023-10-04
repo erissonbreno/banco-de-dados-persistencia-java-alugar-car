@@ -32,7 +32,7 @@
             <td>${veiculo.nome}</td>
             <td>${veiculo.valor}</td>
             <td>${veiculo.categoria}</td>
-            <td>${veiculo.usuario}</td>
+            <td>${veiculo.usuario.nome}</td>
             <td>${veiculo.locacao}</td>
             <td><a href="/veiculo/${veiculo.id}/excluir">excluir</a> </td>
         </tr>
