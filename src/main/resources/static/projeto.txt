@@ -1,4 +1,4 @@
-P;AlugaCar;Projeto de Aluguel de Carros
+P;AlugaCar;Projeto de Aluguel de Veículos
 C;Locacao
 A;descricao;String;Detalhamento do aluguel
 A;data;LocalDateTime;Data de realizacao da locacao
