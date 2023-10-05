@@ -13,7 +13,7 @@ import org.springframework.stereotype.Component;
 
 import java.io.BufferedReader;
 import java.io.FileReader;
-
+@Order(3)
 @Component
 public class MotoLoader implements ApplicationRunner {
 

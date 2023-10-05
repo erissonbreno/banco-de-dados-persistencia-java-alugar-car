@@ -16,6 +16,7 @@
 <table class="table">
     <thead>
     <tr>
+        <th>Id</th>
         <th>Descrição</th>
         <th>Data</th>
         <th>Veiculos</th>
@@ -26,6 +27,7 @@
     <c:forEach var="locacao" items="${listaLocacao}">
 
         <tr>
+            <td>${locacao.id}</td>
             <td>${locacao.descricao}</td>
             <td>${locacao.data}</td>
             <td>${locacao.veiculos}</td>

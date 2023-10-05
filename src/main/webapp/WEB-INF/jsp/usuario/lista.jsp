@@ -22,6 +22,7 @@
         <th>Senha</th>
         <th>Clientes</th>
         <th>Veiculos</th>
+        <th>Locações</th>
         <th></th>
     </tr>
     </thead>
@@ -35,6 +36,7 @@
         <td>${usuario.senha}</td>
         <td>${usuario.clientes.size()}</td>
         <td>${usuario.veiculos.size()}</td>
+        <td>${usuario.locacoes.size()}</td>
         <td><a href="/usuario/${usuario.email}/excluir">excluir</a> </td>
     </tr>
     </c:forEach>
