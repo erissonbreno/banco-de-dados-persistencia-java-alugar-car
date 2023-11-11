@@ -9,5 +9,6 @@ public class AluguelVeiculoApplication {
 	public static void main(String[] args) {
 		SpringApplication.run(AluguelVeiculoApplication.class, args);
 	}
+	//teste
 
 }
